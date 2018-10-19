@@ -14,7 +14,7 @@ DrinkWineAndWatchTVSeries:
   Health: -5
   Mana: +30
   Cheerfulness: -1
-  Fatigue: +10
+  Fatigue: +30
   Money: -20
 DrinkWithMarginalPersonalities:
   Health: -80

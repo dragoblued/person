@@ -25,7 +25,7 @@ class Configure
 				row += 1
 		end
     end
-    def print_()
+    def printCon()
 		for i in 0...@kol_fun
 			puts @funcion_name[i]
 		end
@@ -38,4 +38,4 @@ class Configure
     end
 end
 config = Configure.new
-config.print_
+config.printCon
