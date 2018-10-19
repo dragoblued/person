@@ -1,0 +1,37 @@
+GoToWork:
+  Health: +0
+  Mana: -30
+  Cheerfulness: -5
+  Fatigue: +70
+  Money: +100
+ContiplateOnNature:
+  Health: +0
+  Mana: -10
+  Cheerfulness: +1
+  Fatigue: +10
+  Money: +0
+DrinkWineAndWatchTVSeries:
+  Health: -5
+  Mana: +30
+  Cheerfulness: -1
+  Fatigue: +10
+  Money: -20
+DrinkWithMarginalPersonalities:
+  Health: -80
+  Mana: +90
+  Cheerfulness: +5
+  Fatigue: +80
+  Money: -150
+SingInTheSubway:
+  Health: +0
+  Mana: +10
+  Cheerfulness: +1
+  Fatigue: +20
+  Money: +10
+Sleep:
+  Health: +90
+  Mana: -50
+  Cheerfulness: -3
+  Fatigue: -70
+  Money: +0
+
