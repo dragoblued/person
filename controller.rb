@@ -1,7 +1,7 @@
 require 'matrix'
 class Configure
-	attr_accesor: :matrix_value, :name_function
+	attr_accessor :matrix_value, :name_function
 	def initialize() 
-		
+
 	end
 end
