@@ -5,15 +5,16 @@ describe Configure do
 	before(:all) do
 		@configure = Configure.new
 	end
+	#:funcion_name, :parametr, :kol_fun, :kol_par
 	it 'incorrectly written event names' do
-		for i in 0..@configure.name_function.length
-			@configure.name_function[i].to_i eq @configure.name_function[i]
+		for i in 0..@configure.kol_fun
+			@configure.funcion_name[i].to_i != @configure.funcion_name[i]
 		end
 	end
 	it 'invalid characters are present' do 
-		for i in 0 .. @configure.matrix_value.row_size
-			for j in 0 .. @configure.matrix_value.column_size
-				@configure.matrix_value[i][j].to_i eq @configure.matrix_value[i][j]
+		for i in 0 ... @configure.kol_fun
+			for j in 0 ... @configure.kol_par
+				@configure.parametr[i][j].to_s == @configure.parametr[i][j]
 			end
 		end
 	end

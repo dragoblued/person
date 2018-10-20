@@ -36,5 +36,3 @@ class Configure
 		end
     end
 end
-config = Configure.new
-config.print_
