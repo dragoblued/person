@@ -4,15 +4,15 @@ class ViewPerson
 		if health != health.to_i  || mana != mana.to_i || cheerfulness != cheerfulness.to_i || fatigue != fatigue.to_i || money != money.to_i 
 			raise "No number"
     	else
-			print "\nЗдоровье: "
+			print "\nHealth: "
 			puts health
-			print "Мана: "
+			print "Mana: "
 			puts mana
-			print "Жизнерадостность: "
+			print "Cheerfulness: "
 			puts cheerfulness
-			print "Усталость: "
+			print "Fatigue: "
 			puts fatigue
-			print "Деньги: "
+			print "Money: "
 			puts money
 		end
 		rescue RuntimeError => error

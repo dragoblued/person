@@ -1,6 +1,5 @@
 require "./controller.rb"
 require 'rspec'
-require 'matrix'
 describe Configure do
 	before(:all) do
 		@configure = Configure.new

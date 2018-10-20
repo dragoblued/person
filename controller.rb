@@ -36,3 +36,38 @@ class Configure
 		end
     end
 end
+class Save 
+	def change(name, health, mana, cheerfulness, fatigue, money)
+		config = YAML.load_file('people.yml')
+		row = 0
+		t = 0
+		config.each do |s| 
+			if s.first == name #если такое имя есть перезаписываем данные
+				item = s.last
+				item['Health'] = health
+				item['Mana'] = mana
+				item['Cheerfulness'] = cheerfulness
+				item['Fatigue'] = fatigue
+				item['Money'] = money
+				t = 1
+			end
+			row+=1
+		end
+		if t == 0  
+			recipe = {
+				name.to_s => {
+					"Health"=> health,
+					"Mana"=> mana, 
+					"Cheerfulness"=> cheerfulness,
+					"Fatigue"=> fatigue,
+					"Money"=> money
+				}
+			}
+		end
+		File.open("people.yml", "w") { |file| file.write(config.to_yaml)}
+		if t == 0
+			#добавляем в файл новую запись
+			File.open("people.yml", "a") { |file| file.write(recipe.to_yaml)}
+		end
+	end
+end

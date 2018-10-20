@@ -1,0 +1,20 @@
+---
+Tanya:
+  Health: 10
+  Mana: 30
+  Cheerfulness: 2
+  Fatigue: 10
+  Money: 100
+Sasha:
+  Health: 30
+  Mana: 10
+  Cheerfulness: 1
+  Fatigue: 10
+  Money: 0
+---
+Nata:
+  Health: 100
+  Mana: -20
+  Cheerfulness: 6
+  Fatigue: 90
+  Money: 110
