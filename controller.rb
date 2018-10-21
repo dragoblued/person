@@ -66,5 +66,3 @@ class Save
 		File.open("people.yml", "w") { |file| file.write(config.to_yaml)}
 	end
 end
-save = Save.new
-save.change("Nata", 24, 23 ,123, 41, 36)
