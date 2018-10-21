@@ -20,11 +20,14 @@ while true do
 		if a == 2 
 			loading.change(name_person)
 			puts name_person
-			player.person.health = loading.Attr[0]
-			player.person.mana = loading.Attr[1]
-			player.person.cheerfulness = loading.Attr[2]
-			player.person.fatigue = loading.Attr[3]
-			player.person.money = loading.Attr[4]
+			if ((loading.Attr[0] != nil) || (loading.Attr[1] != nil) || (loading.Attr[2] != nil) || (loading.Attr[3] != nil) || (loading.Attr[4] != nil))
+				player.person.health = loading.Attr[0]
+				player.person.mana = loading.Attr[1]
+				player.person.cheerfulness = loading.Attr[2]
+				player.person.fatigue = loading.Attr[3]
+				player.person.money = loading.Attr[4]
+			end
+			
 		end
 		view_player.view(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
 		while true do
