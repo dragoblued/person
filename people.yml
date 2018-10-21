@@ -11,6 +11,7 @@ Sasha:
   Cheerfulness: 1
   Fatigue: 10
   Money: 0
+<<<<<<< HEAD
 ---
 Siri:
   Health: 40
@@ -18,3 +19,11 @@ Siri:
   Cheerfulness: 2
   Fatigue: 30
   Money: 2
+=======
+Nata:
+  Health: 24
+  Mana: 23
+  Cheerfulness: 123
+  Fatigue: 41
+  Money: 36
+>>>>>>> natasha
