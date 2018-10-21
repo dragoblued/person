@@ -71,3 +71,37 @@ class Save
 		end
 	end
 end
+
+class Load
+    
+    attr_accessor :Attr
+    
+    def change(name)
+        @Attr = Array.new(5)
+        config = YAML.load_file('people.yml')
+        row = 0
+        config.each do |s|
+            if s.first == name
+                item = s.last
+                @Attr[0] = item['Health'].to_i
+                @Attr[1] = item['Mana'].to_i
+                @Attr[2] = item['Cheerfulness'].to_i
+                @Attr[3] = item['Fatigue'].to_i
+                @Attr[4] = item['Money'].to_i
+            end
+            row += 1
+        end       
+    end
+end
+
+class Exit
+
+    attr_accessor :death
+     
+    def check(health)
+        @death = 0
+        if (health < 0)
+            @death = 1
+        end
+    end
+end
