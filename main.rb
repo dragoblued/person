@@ -28,9 +28,9 @@ while true do
 		end
 		view_player.view(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
 		while true do
-			exit.check(player.person.health)
+			exit.check(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
 			if exit.death == 1 
-			    puts "\nYou are dead"
+			    puts "\nGame over"
 			    break 
 			end
 			puts "\nPerform actions:"

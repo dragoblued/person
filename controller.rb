@@ -98,9 +98,9 @@ class Exit
 
     attr_accessor :death
      
-    def check(health)
+    def check(health, mana, cheerfulness, fatigue, money)
         @death = 0
-        if (health < 0)
+        if ((health < 0) || (health > 100) || (mana < 0) || (mana > 100) || (cheerfulness < -10) || (cheerfulness > 10) || (fatigue < 0) || (fatigue > 100) || (money < 0))
             @death = 1
         end
     end
