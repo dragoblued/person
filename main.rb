@@ -6,8 +6,6 @@ require "./view_person.rb"
 save = Save.new
 loading = Load.new
 exit = Exit.new
-player = BuildPerson.new
-player.create_new_person
 config = Configure.new
 view_player = ViewPerson.new
 while true do 
@@ -15,6 +13,8 @@ while true do
 	a = gets.chomp.to_i
 	case a 
 	when 1..2
+		player = BuildPerson.new
+		player.create_new_person
 		puts "\nEnter your name"
 		name_person = gets.chomp
 		if a == 2 

@@ -62,7 +62,6 @@ class Save
 				"Money"=> money
 			}
 		end
-		puts config
 		File.open("people.yml", "w") { |file| file.write(config.to_yaml)}
 	end
 end
