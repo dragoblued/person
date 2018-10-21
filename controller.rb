@@ -66,3 +66,37 @@ class Save
 		File.open("people.yml", "w") { |file| file.write(config.to_yaml)}
 	end
 end
+
+class Load
+    
+    attr_accessor :Attr
+    
+    def change(name)
+        @Attr = Array.new(5)
+        config = YAML.load_file('people.yml')
+        row = 0
+        config.each do |s|
+            if s.first == name
+                item = s.last
+                @Attr[0] = item['Health'].to_i
+                @Attr[1] = item['Mana'].to_i
+                @Attr[2] = item['Cheerfulness'].to_i
+                @Attr[3] = item['Fatigue'].to_i
+                @Attr[4] = item['Money'].to_i
+            end
+            row += 1
+        end       
+    end
+end
+
+class Exit
+
+    attr_accessor :death
+     
+    def check(health, mana, cheerfulness, fatigue, money)
+        @death = 0
+        if ((health < 0) || (health > 100) || (mana < 0) || (mana > 100) || (cheerfulness < -10) || (cheerfulness > 10) || (fatigue < 0) || (fatigue > 100) || (money < 0))
+            @death = 1
+        end
+    end
+end

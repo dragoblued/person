@@ -4,6 +4,8 @@ require "./person.rb"
 require "./view_person.rb"
 
 save = Save.new
+loading = Load.new
+exit = Exit.new
 player = BuildPerson.new
 player.create_new_person
 config = Configure.new
@@ -15,13 +17,25 @@ while true do
 	when 1..2
 		puts "\nEnter your name"
 		name_person = gets.chomp
-		view_player.view(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
 		if a == 2 
-			#чтение данных с файла класс load
+			loading.change(name_person)
+			puts name_person
+			if ((loading.Attr[0] != nil) || (loading.Attr[1] != nil) || (loading.Attr[2] != nil) || (loading.Attr[3] != nil) || (loading.Attr[4] != nil))
+				player.person.health = loading.Attr[0]
+				player.person.mana = loading.Attr[1]
+				player.person.cheerfulness = loading.Attr[2]
+				player.person.fatigue = loading.Attr[3]
+				player.person.money = loading.Attr[4]
+			end
+			
 		end
+		view_player.view(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
 		while true do
-			#проверка границ класс exit
-			#if prov.die == 1 break end
+			exit.check(player.person.health, player.person.mana, player.person.cheerfulness, player.person.fatigue, player.person.money)
+			if exit.death == 1 
+			    puts "\nGame over"
+			    break 
+			end
 			puts "\nPerform actions:"
 			for i in 0...config.kol_fun
 				puts "#{i} - #{config.funcion_name[i]}"
