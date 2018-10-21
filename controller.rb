@@ -54,20 +54,17 @@ class Save
 			row+=1
 		end
 		if t == 0  
-			recipe = {
-				name.to_s => {
-					"Health"=> health,
-					"Mana"=> mana, 
-					"Cheerfulness"=> cheerfulness,
-					"Fatigue"=> fatigue,
-					"Money"=> money
-				}
+			config[name.to_s] = {
+				"Health"=> health,
+				"Mana"=> mana, 
+				"Cheerfulness"=> cheerfulness,
+				"Fatigue"=> fatigue,
+				"Money"=> money
 			}
 		end
+		puts config
 		File.open("people.yml", "w") { |file| file.write(config.to_yaml)}
-		if t == 0
-			#добавляем в файл новую запись
-			File.open("people.yml", "a") { |file| file.write(recipe.to_yaml)}
-		end
 	end
 end
+save = Save.new
+save.change("Nata", 24, 23 ,123, 41, 36)

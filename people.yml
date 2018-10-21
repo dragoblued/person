@@ -11,10 +11,9 @@ Sasha:
   Cheerfulness: 1
   Fatigue: 10
   Money: 0
----
 Nata:
-  Health: 100
-  Mana: -20
-  Cheerfulness: 6
-  Fatigue: 90
-  Money: 110
+  Health: 24
+  Mana: 23
+  Cheerfulness: 123
+  Fatigue: 41
+  Money: 36
